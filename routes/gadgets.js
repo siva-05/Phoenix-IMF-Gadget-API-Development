@@ -109,7 +109,7 @@ router.delete('/:id', authenticateUser, async (req, res) => {
 });
 
 // Self-Destruct - Destroy a gadget
-router.post('/:id/self-destruct', async (req, res) => {
+router.post('/:id/self-destruct', authenticateUser, async (req, res) => {
   try {
     const gadget = await Gadget.findByPk(req.params.id);
     if (!gadget) return res.status(404).json({ error: "Gadget not found" });
