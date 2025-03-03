@@ -1,7 +1,6 @@
 NOTE:
 For operations like add, update, delete, destroy we need JWT token(which is generated when we login)
-
-We need to add it to the Authorization header of your request, Here's how you can do it:
+We need to add it to the Authorization header of your request,Here's how you can do it:
 
 
 Open Postman:
