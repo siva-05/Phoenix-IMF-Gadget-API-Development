@@ -13,9 +13,9 @@ const DATABASE_URL = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}
 const sequelize = new Sequelize(DATABASE_URL, {
   dialect: 'postgres',
   logging: false,
-  // dialectOptions: {
-  //   ssl: { rejectUnauthorized: false } // Required for cloud-hosted DBs
-  // }
+  dialectOptions: {
+    ssl: { rejectUnauthorized: false } // Required for cloud-hosted DBs
+  }
 });
 
 module.exports = sequelize;
